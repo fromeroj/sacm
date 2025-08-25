@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora SACM</title>
+    <link rel="stylesheet" href="/css/app.css">
+    <link rel="stylesheet" href="/css/results.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-music"></i>
+                <span>Licencia Musical MX</span>
+            </div>
+            <div class="nav-menu">
+                <a href="/" class="nav-link">Inicio</a>
+                <a href="/legal" class="nav-link">Marco Legal</a>
+                <a href="/uda" class="nav-link">¿Qué es la UDA?</a>
+                <a href="/tarifario" class="nav-link">Tarifario SACM</a>
+                <a href="/app" class="nav-link active">Calculadora</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <h1>🎵 Calculadora SACM</h1>
+            <p>Cálculo oficial basado en el Tarifario SACM</p>
+            <div class="uda-info">
+                <span class="uda-label">Valor UDA:</span>
+                <span class="uda-value">$310.00 MXN</span>
+            </div>
+        </div>
+
+        <!-- Form Section -->
+        <div id="form-section" class="form-section">
+            <form id="sacm-form" class="sacm-form">
+                
+                <!-- Basic Information -->
+                <div class="form-group-section">
+                    <h3><i class="fas fa-building"></i> Información Básica</h3>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="nombre">Nombre del Establecimiento *</label>
+                            <input type="text" id="nombre" name="nombre" required 
+                                   placeholder="Ej: Restaurante El Buen Sabor">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="tipo">Tipo de Establecimiento *</label>
+                            <select id="tipo" name="tipo" required>
+                                <option value="">Seleccione el tipo</option>
+                                <option value="Restaurante">Restaurante</option>
+                                <option value="Bar">Bar</option>
+                                <option value="Cantina">Cantina</option>
+                                <option value="Karaoke">Karaoke</option>
+                                <option value="Hotel">Hotel</option>
+                                <option value="Motel">Motel</option>
+                                <option value="Discoteca">Discoteca</option>
+                                <option value="Antro">Antro</option>
+                                <option value="Centro Nocturno">Centro Nocturno</option>
+                                <option value="Parque Acuático">Parque Acuático</option>
+                                <option value="Balneario">Balneario</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="direccion">Dirección (opcional)</label>
+                        <input type="text" id="direccion" name="direccion" 
+                               placeholder="Calle, colonia, ciudad">
+                    </div>
+                </div>
+
+                <!-- Capacity Fields (Conditional) -->
+                <div class="form-group-section">
+                    <h3><i class="fas fa-users"></i> Capacidad</h3>
+                    
+                    <!-- For Restaurants, Bars, Cantinas, Karaoke, Centro Nocturno -->
+                    <div id="mesas-field" class="form-group conditional-field">
+                        <label for="capacidadMesas">Número de Mesas *</label>
+                        <input type="number" id="capacidadMesas" name="capacidadMesas" min="1" 
+                               placeholder="Número total de mesas">
+                    </div>
+
+                    <!-- For Discotecas, Antros -->
+                    <div id="personas-field" class="form-group conditional-field">
+                        <label for="capacidadPersonas">Capacidad de Personas *</label>
+                        <input type="number" id="capacidadPersonas" name="capacidadPersonas" min="1" 
+                               placeholder="Capacidad máxima de personas">
+                    </div>
+
+                    <!-- For Hotels -->
+                    <div id="habitaciones-field" class="form-group conditional-field">
+                        <label for="capacidadHabitaciones">Número de Habitaciones *</label>
+                        <input type="number" id="capacidadHabitaciones" name="capacidadHabitaciones" min="1" 
+                               placeholder="Número total de habitaciones">
+                    </div>
+
+                    <!-- For Parques Acuáticos -->
+                    <div id="albercas-field" class="form-group conditional-field">
+                        <label for="numeroAlbercas">Número de Albercas *</label>
+                        <input type="number" id="numeroAlbercas" name="numeroAlbercas" min="1" value="1"
+                               placeholder="Número de albercas">
+                    </div>
+                </div>
+
+                <!-- Hotel Specific Fields -->
+                <div id="hotel-section" class="form-group-section conditional-field">
+                    <h3><i class="fas fa-hotel"></i> Información del Hotel</h3>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="hotelEstrellas">Categoría del Hotel *</label>
+                            <select id="hotelEstrellas" name="hotelEstrellas">
+                                <option value="">Seleccione categoría</option>
+                                <option value="1">1 Estrella</option>
+                                <option value="2">2 Estrellas</option>
+                                <option value="3">3 Estrellas</option>
+                                <option value="4">4 Estrellas</option>
+                                <option value="5">5 Estrellas</option>
+                                <option value="gran_turismo">Gran Turismo</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>¿Está en zona turística?</label>
+                            <div class="radio-group">
+                                <label class="radio-option">
+                                    <input type="radio" name="zonaTuristica" value="si">
+                                    <span class="radio-custom"></span>
+                                    Sí
+                                </label>
+                                <label class="radio-option">
+                                    <input type="radio" name="zonaTuristica" value="no" checked>
+                                    <span class="radio-custom"></span>
+                                    No
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Geographic Zone -->
+                <div class="form-group-section">
+                    <h3><i class="fas fa-map-marker-alt"></i> Ubicación</h3>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="zonaGeografica">Zona Geográfica</label>
+                            <select id="zonaGeografica" name="zonaGeografica">
+                                <option value="general">República General</option>
+                                <option value="cdmx">Ciudad de México (D.F.)</option>
+                                <option value="guadalajara">Guadalajara, Jalisco</option>
+                                <option value="monterrey">Monterrey, Nuevo León</option>
+                            </select>
+                        </div>
+                        
+                        <div id="temporada-field" class="form-group conditional-field">
+                            <label for="temporada">Temporada (para discotecas en zonas especiales)</label>
+                            <select id="temporada" name="temporada">
+                                <option value="alta">Temporada Alta (7 meses)</option>
+                                <option value="baja">Temporada Baja (5 meses)</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Music Type -->
+                <div class="form-group-section">
+                    <h3><i class="fas fa-music"></i> Tipo de Música</h3>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Tipo de Música *</label>
+                            <div class="radio-group">
+                                <label class="radio-option">
+                                    <input type="radio" name="tipoMusica" value="grabada" required>
+                                    <span class="radio-custom"></span>
+                                    Solo Música Grabada
+                                </label>
+                                <label class="radio-option">
+                                    <input type="radio" name="tipoMusica" value="vivo" required>
+                                    <span class="radio-custom"></span>
+                                    Solo Música en Vivo
+                                </label>
+                                <label class="radio-option">
+                                    <input type="radio" name="tipoMusica" value="mixta" required>
+                                    <span class="radio-custom"></span>
+                                    Música Grabada y en Vivo
+                                </label>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>¿Cobra entrada? *</label>
+                            <div class="radio-group">
+                                <label class="radio-option">
+                                    <input type="radio" name="cobraEntrada" value="si" required>
+                                    <span class="radio-custom"></span>
+                                    Sí
+                                </label>
+                                <label class="radio-option">
+                                    <input type="radio" name="cobraEntrada" value="no" required>
+                                    <span class="radio-custom"></span>
+                                    No
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Baile field for restaurants/bars -->
+                    <div id="baile-field" class="form-group conditional-field">
+                        <label>¿Se permite baile?</label>
+                        <div class="radio-group">
+                            <label class="radio-option">
+                                <input type="radio" name="permiteBaile" value="si">
+                                <span class="radio-custom"></span>
+                                Sí
+                            </label>
+                            <label class="radio-option">
+                                <input type="radio" name="permiteBaile" value="no" checked>
+                                <span class="radio-custom"></span>
+                                No
+                            </label>
+                        </div>
+                        <small>Para restaurantes y bares - afecta significativamente la tarifa</small>
+                    </div>
+                </div>
+
+                <!-- Submit Button -->
+                <div class="form-actions">
+                    <button type="submit" class="btn-calculate">
+                        <i class="fas fa-calculator"></i>
+                        Calcular Tarifa SACM
+                    </button>
+                </div>
+            </form>
+        </div>
+
+        <!-- Loading Section -->
+        <div id="loading-section" class="loading-section" style="display: none;">
+            <div class="loading-spinner">
+                <i class="fas fa-spinner fa-spin"></i>
+            </div>
+            <p>Calculando tarifa SACM...</p>
+        </div>
+
+        <!-- Results Section -->
+        <div id="results-section" class="results-section" style="display: none;">
+            <div class="result-header">
+                <h2>📊 Resultado del Cálculo SACM</h2>
+                <div class="result-actions">
+                    <button id="new-calculation" class="btn-secondary">
+                        <i class="fas fa-plus"></i>
+                        Nuevo Cálculo
+                    </button>
+                </div>
+            </div>
+
+            <div id="result-content" class="result-content">
+                <!-- Results will be populated here -->
+            </div>
+        </div>
+    </div>
+
+    <script src="/js/app.js"></script>
+</body>
+</html>
+

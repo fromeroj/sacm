@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %></title>
+    <link rel="stylesheet" href="/css/uda.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-music"></i>
+                <a href="/" style="color: inherit; text-decoration: none;">
+                    <span>Licencia Musical MX</span>
+                </a>
+            </div>
+            <div class="nav-menu">
+                <a href="/" class="nav-link">Inicio</a>
+                <a href="/legal" class="nav-link">Marco Legal</a>
+                <a href="#" class="nav-link active">¿Qué es la UDA?</a>
+                <a href="/tarifario" class="nav-link">Tarifario SACM</a>
+                <a href="/app" class="nav-link">Calculadora</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="uda-header">
+            <h1>💰 ¿Qué es la UDA?</h1>
+            <p>Unidad de Derechos de Autor - El sistema moderno de tarifas musicales en México</p>
+        </div>
+
+        <div class="uda-content">
+            <!-- Introducción -->
+            <section class="uda-section">
+                <h2><i class="fas fa-lightbulb"></i> Concepto y Origen</h2>
+                <div class="concept-grid">
+                    <div class="concept-card">
+                        <h3>¿Qué es la UDA?</h3>
+                        <p>La <strong>UDA (Unidad de Derechos de Autor)</strong> es una unidad de medida moderna creada por SACM para establecer tarifas justas y actualizables para el uso de música protegida por derechos de autor.</p>
+                    </div>
+                    <div class="concept-card">
+                        <h3>¿Por qué se creó?</h3>
+                        <p>Fue motivada por los altos índices inflacionarios y las constantes devaluaciones que sufrió México, permitiendo que las tarifas se mantengan actualizadas automáticamente.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Historia y Desarrollo -->
+            <section class="uda-section">
+                <h2><i class="fas fa-history"></i> Historia y Desarrollo</h2>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-year">1992</div>
+                        <div class="timeline-content">
+                            <h3>Inicio del Estudio</h3>
+                            <p>SACM comenzó a estudiar la posibilidad de establecer una unidad de medida de derechos de autor que pudiera ser indexada automáticamente.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-year">1996</div>
+                        <div class="timeline-content">
+                            <h3>Aprobación Internacional</h3>
+                            <p>En la Reunión del Comité de Tarifas Latinoamericano de la CISAC en Buenos Aires, Argentina, se aprobó el establecimiento de la UDA para homologar criterios de fijación de aranceles.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-year">1998</div>
+                        <div class="timeline-content">
+                            <h3>Implementación Legal</h3>
+                            <p>SACM propuso ante el Congreso la inclusión en el Reglamento de la Ley Federal del Derecho de Autor de un artículo estableciendo el mecanismo de actualización de tarifas mediante UDAs.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Objetivos de la UDA -->
+            <section class="uda-section">
+                <h2><i class="fas fa-target"></i> Objetivos de la UDA</h2>
+                <div class="objectives-grid">
+                    <div class="objective-card">
+                        <i class="fas fa-chart-line"></i>
+                        <h3>Actualización Automática</h3>
+                        <p>Garantizar que la UDA sea indexada automáticamente en base a los indicadores reales del mercado, evitando devaluaciones constantes.</p>
+                    </div>
+                    <div class="objective-card">
+                        <i class="fas fa-balance-scale"></i>
+                        <h3>Tarifas Justas</h3>
+                        <p>Definir y unificar los criterios de explotación para la fijación de tarifas convincentes para usuarios y que cubran expectativas de autores.</p>
+                    </div>
+                    <div class="objective-card">
+                        <i class="fas fa-globe-americas"></i>
+                        <h3>Estándar Regional</h3>
+                        <p>Crear una alternativa de solución no solo para México sino para cualquier país con economía similar, contrarrestando cambios económicos.</p>
+                    </div>
+                    <div class="objective-card">
+                        <i class="fas fa-shield-alt"></i>
+                        <h3>Protección Económica</h3>
+                        <p>Ser una unidad de medida práctica, eficaz, dinámica y de fácil aplicación para la comunicación entre la Sociedad de Autores y usuarios.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Cálculo de la UDA -->
+            <section class="uda-section">
+                <h2><i class="fas fa-calculator"></i> ¿Cómo se Calcula la UDA?</h2>
+                <div class="calculation-info">
+                    <div class="calculation-card">
+                        <h3>Factores de Cálculo</h3>
+                        <ul>
+                            <li><strong>Índice Nacional de Precios al Consumidor (IPC)</strong></li>
+                            <li><strong>Salarios mínimos diarios de la zona económica aplicable</strong></li>
+                            <li><strong>Fecha de modificación al salario mínimo</strong></li>
+                        </ul>
+                    </div>
+                    <div class="calculation-card">
+                        <h3>Principio de Actualización</h3>
+                        <p>La UDA se actualiza considerando el mayor incremento entre:</p>
+                        <ul>
+                            <li>El incremento salarial anual</li>
+                            <li>El incremento del IPC anual</li>
+                        </ul>
+                        <p><strong>Se aplica el incremento mayor</strong> para proteger el valor real de las tarifas.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Jerarquía Vertical de Tarifas -->
+            <section class="uda-section">
+                <h2><i class="fas fa-sitemap"></i> Jerarquía Vertical de Tarifas</h2>
+                <div class="hierarchy-info">
+                    <p>La UDA no debe ir en función del giro o rubro, sino en función del <strong>tipo de explotación</strong>:</p>
+                    
+                    <div class="hierarchy-grid">
+                        <div class="hierarchy-card">
+                            <h3>1. Música Indispensable</h3>
+                            <p><strong>Ingreso Único:</strong> Cuando la música genera el ingreso total (conciertos, recitales, etc.)</p>
+                            <p><strong>Ingreso Compartido:</strong> Cuando la música no genera el ingreso total pero existen otros elementos comerciales (discotecas, cabarets).</p>
+                        </div>
+                        
+                        <div class="hierarchy-card">
+                            <h3>2. Música Necesaria</h3>
+                            <p>Cuando la música es parte importante en la generación de ingresos (bar con música viva, video-bar, etc.)</p>
+                        </div>
+                        
+                        <div class="hierarchy-card">
+                            <h3>3. Música Secundaria</h3>
+                            <p>Cuando la música es un servicio adicional y no representativa en la generación de ingresos (tiendas de autoservicio, hoteles, etc.)</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Elementos Básicos para Fijación -->
+            <section class="uda-section">
+                <h2><i class="fas fa-puzzle-piece"></i> Elementos Básicos para Fijación de Tarifas</h2>
+                <div class="elements-diagram">
+                    <div class="central-element">
+                        <h3>Criterio Base para la Fijación de Tarifas</h3>
+                    </div>
+                    <div class="elements-grid">
+                        <div class="element-card">
+                            <h4>Características del Negocio</h4>
+                            <ul>
+                                <li>Tipo de establecimiento</li>
+                                <li>Capacidad</li>
+                                <li>Ubicación geográfica</li>
+                            </ul>
+                        </div>
+                        <div class="element-card">
+                            <h4>Formas de Utilización</h4>
+                            <ul>
+                                <li>Música grabada</li>
+                                <li>Música en vivo</li>
+                                <li>Eventos especiales</li>
+                            </ul>
+                        </div>
+                        <div class="element-card">
+                            <h4>Tipos de Explotación</h4>
+                            <ul>
+                                <li>Lucro directo</li>
+                                <li>Lucro indirecto</li>
+                                <li>Sin fines de lucro</li>
+                            </ul>
+                        </div>
+                        <div class="element-card">
+                            <h4>Costos de Contratación y Cobranza</h4>
+                            <ul>
+                                <li>Volumen de usuarios</li>
+                                <li>Extensión territorial</li>
+                                <li>Facilidad de cobro</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Tipos de Pago -->
+            <section class="uda-section">
+                <h2><i class="fas fa-credit-card"></i> Formas de Pago según el Tipo de Uso</h2>
+                <div class="payment-types">
+                    <div class="payment-card">
+                        <h3><i class="fas fa-calendar-alt"></i> Unidad de Medida Mensual</h3>
+                        <p>Para usuarios que utilizan la música como un servicio adicional dentro de su giro comercial (música indirecta).</p>
+                        <p><strong>Ejemplo:</strong> Restaurantes, tiendas, hoteles</p>
+                    </div>
+                    
+                    <div class="payment-card">
+                        <h3><i class="fas fa-calendar-day"></i> Unidad de Medida por Día</h3>
+                        <p>Para usuarios que utilizan la música como parte importante en la generación de ingresos (música necesaria).</p>
+                        <p><strong>Ejemplo:</strong> Discotecas, bares con música en vivo</p>
+                    </div>
+                    
+                    <div class="payment-card">
+                        <h3><i class="fas fa-percentage"></i> Unidad de Medida Porcentual</h3>
+                        <p>Para cuando la música es indispensable y genera el ingreso total o principal.</p>
+                        <p><strong>Ejemplo:</strong> Conciertos, eventos musicales con costo de entrada</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Beneficios de la UDA -->
+            <section class="uda-section">
+                <h2><i class="fas fa-star"></i> Beneficios del Sistema UDA</h2>
+                <div class="benefits-grid">
+                    <div class="benefit-card">
+                        <i class="fas fa-gavel"></i>
+                        <h3>Legitimación Legal</h3>
+                        <p>Sistema respaldado por la legislación mexicana de derechos de autor</p>
+                    </div>
+                    <div class="benefit-card">
+                        <i class="fas fa-handshake"></i>
+                        <h3>Credibilidad</h3>
+                        <p>Mayor confianza de los usuarios al contar con un sistema razonado y transparente</p>
+                    </div>
+                    <div class="benefit-card">
+                        <i class="fas fa-users"></i>
+                        <h3>Captación de Usuarios</h3>
+                        <p>Facilita la incorporación de nuevos usuarios mediante un padrón de socios integrado</p>
+                    </div>
+                    <div class="benefit-card">
+                        <i class="fas fa-sync-alt"></i>
+                        <h3>Actualización Automática</h3>
+                        <p>Las tarifas se mantienen actualizadas según las condiciones económicas del país</p>
+                    </div>
+                    <div class="benefit-card">
+                        <i class="fas fa-ban"></i>
+                        <h3>Eliminación de Corrupción</h3>
+                        <p>Sistema transparente que elimina actos de corrupción o soborno</p>
+                    </div>
+                    <div class="benefit-card">
+                        <i class="fas fa-file-contract"></i>
+                        <h3>Contratos Individuales</h3>
+                        <p>Facilita la celebración de contratos individuales con apego estricto a lineamientos establecidos</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Valor Actual de la UDA -->
+            <section class="uda-section current-value">
+                <h2><i class="fas fa-dollar-sign"></i> Valor Actual de la UDA</h2>
+                <div class="value-info">
+                    <div class="value-card">
+                        <h3>Información Importante</h3>
+                        <p>El valor de la UDA se actualiza periódicamente según los factores económicos mencionados. Para conocer el <strong>valor actual de la UDA</strong>, debe consultarse directamente con:</p>
+                        <div class="contact-info">
+                            <a href="https://www.sacm.org.mx" target="_blank" class="contact-link">
+                                <i class="fas fa-external-link-alt"></i>
+                                SACM - Sociedad de Autores y Compositores de México
+                            </a>
+                        </div>
+                        <p class="note">Los cálculos en esta aplicación utilizan valores de referencia para fines demostrativos únicamente.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Disclaimer -->
+            <section class="uda-section disclaimer">
+                <h2><i class="fas fa-info-circle"></i> Aviso Importante</h2>
+                <div class="disclaimer-content">
+                    <p><strong>Esta aplicación es una herramienta educativa y de demostración.</strong></p>
+                    <ul>
+                        <li>La información sobre la UDA es de carácter informativo y educativo</li>
+                        <li>Los valores utilizados en los cálculos son referenciales</li>
+                        <li>Para tarifas oficiales y valores actuales de la UDA, consulte directamente con SACM</li>
+                        <li>Los contratos generados NO tienen validez legal</li>
+                        <li>Esta información se basa en documentos oficiales de SACM pero puede no estar actualizada</li>
+                    </ul>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <script src="/js/uda.js"></script>
+</body>
+</html>
+

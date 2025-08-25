@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %></title>
+    <link rel="stylesheet" href="/css/tarifario.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-music"></i>
+                <a href="/" style="color: inherit; text-decoration: none;">
+                    <span>Licencia Musical MX</span>
+                </a>
+            </div>
+            <div class="nav-menu">
+                <a href="/" class="nav-link">Inicio</a>
+                <a href="/legal" class="nav-link">Marco Legal</a>
+                <a href="/uda" class="nav-link">¿Qué es la UDA?</a>
+                <a href="#" class="nav-link active">Tarifario SACM</a>
+                <a href="/app" class="nav-link">Calculadora</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="tarifario-header">
+            <h1>📋 Tarifario SACM</h1>
+            <p>Estructura oficial de tarifas para el uso de música protegida por derechos de autor</p>
+        </div>
+
+        <div class="tarifario-content">
+            <!-- Introducción -->
+            <section class="tarifario-section">
+                <h2><i class="fas fa-info-circle"></i> Introducción al Tarifario</h2>
+                <div class="intro-grid">
+                    <div class="intro-card">
+                        <h3>¿Qué es el Tarifario SACM?</h3>
+                        <p>Es el documento oficial que establece las tarifas que deben pagar los usuarios de música para obtener las licencias correspondientes por el uso de obras musicales protegidas por derechos de autor.</p>
+                    </div>
+                    <div class="intro-card">
+                        <h3>Base de Cálculo</h3>
+                        <p>Todas las tarifas están expresadas en <strong>UDAs (Unidades de Derechos de Autor)</strong>, lo que permite su actualización automática según las condiciones económicas del país.</p>
+                    </div>
+                    <div class="intro-card">
+                        <h3>Vigencia</h3>
+                        <p>El tarifario es la versión más reciente disponible públicamente. Las tarifas pueden actualizarse periódicamente por SACM según las condiciones del mercado.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Categorías Principales -->
+            <section class="tarifario-section">
+                <h2><i class="fas fa-list"></i> Categorías Principales de Establecimientos</h2>
+                <div class="categories-grid">
+                    <div class="category-card">
+                        <i class="fas fa-utensils"></i>
+                        <h3>Restaurantes y Bares</h3>
+                        <p>Incluye restaurantes, bares, cantinas, karaoke, sinfonolas y establecimientos similares</p>
+                        <div class="category-details">
+                            <strong>Factores:</strong> Número de mesas, tipo de música, costo de entrada
+                        </div>
+                    </div>
+                    
+                    <div class="category-card">
+                        <i class="fas fa-bed"></i>
+                        <h3>Hoteles y Moteles</h3>
+                        <p>Establecimientos de hospedaje clasificados por estrellas y ubicación geográfica</p>
+                        <div class="category-details">
+                            <strong>Factores:</strong> Número de estrellas, cantidad de habitaciones, zona turística
+                        </div>
+                    </div>
+                    
+                    <div class="category-card">
+                        <i class="fas fa-music"></i>
+                        <h3>Discotecas y Antros</h3>
+                        <p>Establecimientos dedicados principalmente al baile y entretenimiento nocturno</p>
+                        <div class="category-details">
+                            <strong>Factores:</strong> Capacidad, ubicación geográfica, temporada
+                        </div>
+                    </div>
+                    
+                    <div class="category-card">
+                        <i class="fas fa-store"></i>
+                        <h3>Establecimientos Comerciales</h3>
+                        <p>Centros comerciales, tiendas, gimnasios y establecimientos similares</p>
+                        <div class="category-details">
+                            <strong>Factores:</strong> Tipo de negocio, área, uso de música
+                        </div>
+                    </div>
+                    
+                    <div class="category-card">
+                        <i class="fas fa-swimming-pool"></i>
+                        <h3>Parques y Centros Recreativos</h3>
+                        <p>Balnearios, parques acuáticos, zoológicos y centros de entretenimiento</p>
+                        <div class="category-details">
+                            <strong>Factores:</strong> Tipo de parque, capacidad, servicios adicionales
+                        </div>
+                    </div>
+                    
+                    <div class="category-card">
+                        <i class="fas fa-calendar-alt"></i>
+                        <h3>Eventos Especiales</h3>
+                        <p>Conciertos, espectáculos, ferias y eventos musicales</p>
+                        <div class="category-details">
+                            <strong>Factores:</strong> Tipo de evento, costo de entrada, duración
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Tipos de Tarifas -->
+            <section class="tarifario-section">
+                <h2><i class="fas fa-calculator"></i> Tipos de Tarifas</h2>
+                <div class="tariff-types">
+                    <div class="tariff-card">
+                        <div class="tariff-icon">
+                            <i class="fas fa-calendar-alt"></i>
+                        </div>
+                        <h3>Tarifas Mensuales</h3>
+                        <p>Para establecimientos que usan música como servicio adicional</p>
+                        <div class="tariff-examples">
+                            <strong>Ejemplos:</strong>
+                            <ul>
+                                <li>Restaurantes con música de fondo</li>
+                                <li>Tiendas con música ambiental</li>
+                                <li>Hoteles (áreas comunes)</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="tariff-card">
+                        <div class="tariff-icon">
+                            <i class="fas fa-calendar-day"></i>
+                        </div>
+                        <h3>Tarifas por Día</h3>
+                        <p>Para establecimientos donde la música es parte importante del negocio</p>
+                        <div class="tariff-examples">
+                            <strong>Ejemplos:</strong>
+                            <ul>
+                                <li>Discotecas y antros</li>
+                                <li>Bares con música en vivo</li>
+                                <li>Centros nocturnos</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="tariff-card">
+                        <div class="tariff-icon">
+                            <i class="fas fa-ticket-alt"></i>
+                        </div>
+                        <h3>Tarifas por Evento</h3>
+                        <p>Para eventos específicos y espectáculos musicales</p>
+                        <div class="tariff-examples">
+                            <strong>Ejemplos:</strong>
+                            <ul>
+                                <li>Conciertos</li>
+                                <li>Festivales musicales</li>
+                                <li>Eventos corporativos</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="tariff-card">
+                        <div class="tariff-icon">
+                            <i class="fas fa-percentage"></i>
+                        </div>
+                        <h3>Porcentaje de Taquilla</h3>
+                        <p>Para eventos con costo de entrada donde la música es indispensable</p>
+                        <div class="tariff-examples">
+                            <strong>Porcentaje:</strong> 6% de la taquilla bruta
+                            <ul>
+                                <li>Conciertos con entrada</li>
+                                <li>Espectáculos musicales</li>
+                                <li>Eventos con artistas</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Factores de Cálculo -->
+            <section class="tarifario-section">
+                <h2><i class="fas fa-cogs"></i> Factores que Influyen en las Tarifas</h2>
+                <div class="factors-grid">
+                    <div class="factor-card">
+                        <h3><i class="fas fa-building"></i> Tipo de Establecimiento</h3>
+                        <p>Cada categoría tiene tarifas específicas según su giro comercial y el uso que hace de la música.</p>
+                    </div>
+                    
+                    <div class="factor-card">
+                        <h3><i class="fas fa-users"></i> Capacidad</h3>
+                        <p>Número de personas, mesas, habitaciones o área del establecimiento según corresponda.</p>
+                    </div>
+                    
+                    <div class="factor-card">
+                        <h3><i class="fas fa-map-marker-alt"></i> Ubicación Geográfica</h3>
+                        <p>Algunas tarifas varían para CDMX, Estado de México, Nuevo León, Jalisco y Baja California.</p>
+                    </div>
+                    
+                    <div class="factor-card">
+                        <h3><i class="fas fa-music"></i> Tipo de Música</h3>
+                        <p>Música grabada, música en vivo, o combinación de ambas tienen tarifas diferentes.</p>
+                    </div>
+                    
+                    <div class="factor-card">
+                        <h3><i class="fas fa-ticket-alt"></i> Costo de Entrada</h3>
+                        <p>Los establecimientos que cobran entrada tienen tarifas diferentes o pagan porcentaje de taquilla.</p>
+                    </div>
+                    
+                    <div class="factor-card">
+                        <h3><i class="fas fa-calendar-week"></i> Frecuencia de Uso</h3>
+                        <p>La frecuencia con que se presenta música en vivo afecta el cálculo de la tarifa.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Ejemplos de Tarifas -->
+            <section class="tarifario-section">
+                <h2><i class="fas fa-chart-bar"></i> Ejemplos de Tarifas Comunes</h2>
+                <div class="examples-container">
+                    <div class="example-category">
+                        <h3>Restaurantes</h3>
+                        <div class="example-table">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Tipo</th>
+                                        <th>Capacidad</th>
+                                        <th>Tarifa (UDAs)</th>
+                                        <th>Base de Cálculo</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Con música grabada</td>
+                                        <td>1-20 mesas</td>
+                                        <td>4</td>
+                                        <td>Por mes</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Con música grabada</td>
+                                        <td>21-40 mesas</td>
+                                        <td>8</td>
+                                        <td>Por mes</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Con música en vivo</td>
+                                        <td>1-25 mesas</td>
+                                        <td>2</td>
+                                        <td>Por día de funcionamiento</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    
+                    <div class="example-category">
+                        <h3>Hoteles</h3>
+                        <div class="example-table">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Categoría</th>
+                                        <th>Habitaciones</th>
+                                        <th>Tarifa (UDAs)</th>
+                                        <th>Base de Cálculo</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>3 Estrellas</td>
+                                        <td>Hasta 50</td>
+                                        <td>5.6</td>
+                                        <td>Por mes</td>
+                                    </tr>
+                                    <tr>
+                                        <td>4 Estrellas</td>
+                                        <td>Hasta 100</td>
+                                        <td>18</td>
+                                        <td>Por mes</td>
+                                    </tr>
+                                    <tr>
+                                        <td>5 Estrellas</td>
+                                        <td>Hasta 100</td>
+                                        <td>45</td>
+                                        <td>Por mes</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    
+                    <div class="example-category">
+                        <h3>Discotecas</h3>
+                        <div class="example-table">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Zona</th>
+                                        <th>Capacidad</th>
+                                        <th>Tarifa (UDAs)</th>
+                                        <th>Base de Cálculo</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>República General</td>
+                                        <td>1-300 personas</td>
+                                        <td>10</td>
+                                        <td>Por día de funcionamiento</td>
+                                    </tr>
+                                    <tr>
+                                        <td>CDMX/Guadalajara</td>
+                                        <td>1-250 personas</td>
+                                        <td>15</td>
+                                        <td>Por día de funcionamiento</td>
+                                    </tr>
+                                    <tr>
+                                        <td>CDMX/Guadalajara</td>
+                                        <td>1501+ personas</td>
+                                        <td>80</td>
+                                        <td>Por día de funcionamiento</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Zonas Geográficas -->
+            <section class="tarifario-section">
+                <h2><i class="fas fa-map"></i> Zonas Geográficas Especiales</h2>
+                <div class="zones-info">
+                    <div class="zone-card">
+                        <h3>Zona Metropolitana Especial</h3>
+                        <p>Algunas categorías tienen tarifas diferenciadas para:</p>
+                        <ul>
+                            <li>Ciudad de México (CDMX)</li>
+                            <li>Estado de México</li>
+                            <li>Guadalajara, Jalisco</li>
+                            <li>Monterrey, Nuevo León</li>
+                            <li>Tijuana, Baja California</li>
+                        </ul>
+                        <p class="zone-note">Estas zonas generalmente tienen tarifas más altas debido a su mayor actividad económica.</p>
+                    </div>
+                    
+                    <div class="zone-card">
+                        <h3>Zonas Turísticas</h3>
+                        <p>Los hoteles en zonas turísticas tienen tarifas especiales:</p>
+                        <ul>
+                            <li>Cancún, Quintana Roo</li>
+                            <li>Puerto Vallarta, Jalisco</li>
+                            <li>Acapulco, Guerrero</li>
+                            <li>Los Cabos, Baja California Sur</li>
+                            <li>Playa del Carmen, Quintana Roo</li>
+                        </ul>
+                        <p class="zone-note">Las tarifas turísticas suelen ser más altas que las tarifas generales.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Temporadas -->
+            <section class="tarifario-section">
+                <h2><i class="fas fa-calendar"></i> Temporadas y Variaciones</h2>
+                <div class="seasons-grid">
+                    <div class="season-card">
+                        <h3>Temporada Alta</h3>
+                        <p>Algunos establecimientos tienen tarifas diferenciadas durante los meses de mayor actividad.</p>
+                        <div class="season-details">
+                            <strong>Duración:</strong> Generalmente 7 meses al año<br>
+                            <strong>Aplica a:</strong> Parques temáticos, zonas turísticas, discotecas en destinos vacacionales
+                        </div>
+                    </div>
+                    
+                    <div class="season-card">
+                        <h3>Temporada Baja</h3>
+                        <p>Tarifas reducidas durante los meses de menor actividad turística o comercial.</p>
+                        <div class="season-details">
+                            <strong>Duración:</strong> Generalmente 5 meses al año<br>
+                            <strong>Beneficio:</strong> Tarifas hasta 25% menores que temporada alta
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Cómo Usar el Tarifario -->
+            <section class="tarifario-section">
+                <h2><i class="fas fa-question-circle"></i> ¿Cómo Usar el Tarifario?</h2>
+                <div class="usage-steps">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <h3>Identifica tu Categoría</h3>
+                            <p>Determina en qué categoría de establecimiento encaja tu negocio según el tarifario.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <h3>Mide tu Capacidad</h3>
+                            <p>Calcula el número de mesas, personas, habitaciones o área según corresponda a tu categoría.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <h3>Define el Tipo de Música</h3>
+                            <p>Especifica si usas música grabada, en vivo, o ambas, y con qué frecuencia.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="step">
+                        <div class="step-number">4</div>
+                        <div class="step-content">
+                            <h3>Consulta la Tarifa</h3>
+                            <p>Busca en el tarifario la tarifa correspondiente expresada en UDAs.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="step">
+                        <div class="step-number">5</div>
+                        <div class="step-content">
+                            <h3>Convierte a Pesos</h3>
+                            <p>Multiplica las UDAs por el valor actual de la UDA para obtener el costo en pesos mexicanos.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Disclaimer -->
+            <section class="tarifario-section disclaimer">
+                <h2><i class="fas fa-exclamation-triangle"></i> Aviso Importante</h2>
+                <div class="disclaimer-content">
+                    <p><strong>Esta información es de carácter educativo y demostrativo.</strong></p>
+                    <ul>
+                        <li>El tarifario mostrado corresponde a la versión disponible públicamente</li>
+                        <li>Las tarifas pueden haber sido actualizadas por SACM</li>
+                        <li>Para tarifas oficiales y actuales, consulte directamente con SACM</li>
+                        <li>El valor actual de la UDA debe consultarse con SACM</li>
+                        <li>Esta aplicación es solo para fines demostrativos</li>
+                        <li>Los contratos generados NO tienen validez legal</li>
+                    </ul>
+                    <div class="official-contact">
+                        <a href="https://www.sacm.org.mx" target="_blank" class="contact-btn">
+                            <i class="fas fa-external-link-alt"></i>
+                            Consultar Tarifas Oficiales en SACM
+                        </a>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <script src="/js/tarifario.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,651 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Navigation */
+.navbar {
+    background: white;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 1rem 0;
+    margin-bottom: 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-logo {
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+.nav-logo i {
+    margin-right: 10px;
+    color: #3498db;
+}
+
+.nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    transition: color 0.3s ease;
+    padding: 8px 16px;
+    border-radius: 20px;
+}
+
+.nav-link:hover {
+    color: #3498db;
+}
+
+.nav-link.active {
+    background: linear-gradient(135deg, #3498db, #2980b9);
+    color: white;
+}
+
+/* UDA Header */
+.uda-header {
+    text-align: center;
+    margin-bottom: 3rem;
+    padding: 2rem 0;
+}
+
+.uda-header h1 {
+    font-size: 2.5rem;
+    color: #2c3e50;
+    margin-bottom: 1rem;
+    background: linear-gradient(135deg, #3498db, #2980b9);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.uda-header p {
+    font-size: 1.2rem;
+    color: #666;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* UDA Content */
+.uda-content {
+    background: white;
+    border-radius: 15px;
+    padding: 2rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+}
+
+.uda-section {
+    margin-bottom: 3rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid #e9ecef;
+}
+
+.uda-section:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+}
+
+.uda-section h2 {
+    color: #2c3e50;
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.uda-section h2 i {
+    color: #3498db;
+}
+
+/* Concept Grid */
+.concept-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.concept-card {
+    background: #f8f9fa;
+    padding: 2rem;
+    border-radius: 10px;
+    border-left: 4px solid #3498db;
+    transition: transform 0.3s ease;
+}
+
+.concept-card:hover {
+    transform: translateY(-5px);
+}
+
+.concept-card h3 {
+    color: #2c3e50;
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+}
+
+.concept-card p {
+    color: #555;
+    line-height: 1.7;
+}
+
+/* Timeline */
+.timeline {
+    position: relative;
+    margin: 2rem 0;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: linear-gradient(135deg, #3498db, #2980b9);
+    transform: translateX(-50%);
+}
+
+.timeline-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 3rem;
+    position: relative;
+}
+
+.timeline-item:nth-child(odd) {
+    flex-direction: row;
+}
+
+.timeline-item:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+.timeline-year {
+    background: linear-gradient(135deg, #3498db, #2980b9);
+    color: white;
+    padding: 1rem 1.5rem;
+    border-radius: 50px;
+    font-weight: bold;
+    font-size: 1.1rem;
+    min-width: 80px;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+}
+
+.timeline-content {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    margin: 0 2rem;
+    flex: 1;
+    border-left: 4px solid #3498db;
+}
+
+.timeline-content h3 {
+    color: #2c3e50;
+    margin-bottom: 0.5rem;
+}
+
+.timeline-content p {
+    color: #555;
+    line-height: 1.6;
+}
+
+/* Objectives Grid */
+.objectives-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.objective-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    border-top: 4px solid #3498db;
+}
+
+.objective-card:hover {
+    transform: translateY(-10px);
+}
+
+.objective-card i {
+    font-size: 3rem;
+    color: #3498db;
+    margin-bottom: 1rem;
+}
+
+.objective-card h3 {
+    color: #2c3e50;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+}
+
+.objective-card p {
+    color: #555;
+    line-height: 1.6;
+}
+
+/* Calculation Info */
+.calculation-info {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.calculation-card {
+    background: #e3f2fd;
+    padding: 2rem;
+    border-radius: 10px;
+    border-left: 4px solid #2196f3;
+}
+
+.calculation-card h3 {
+    color: #1976d2;
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+}
+
+.calculation-card ul {
+    margin-left: 1.5rem;
+    color: #555;
+}
+
+.calculation-card li {
+    margin-bottom: 0.5rem;
+    line-height: 1.6;
+}
+
+.calculation-card p {
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+/* Hierarchy Info */
+.hierarchy-info {
+    margin-top: 2rem;
+}
+
+.hierarchy-info > p {
+    background: #fff3cd;
+    padding: 1rem;
+    border-radius: 8px;
+    border-left: 4px solid #ffc107;
+    color: #856404;
+    font-weight: 600;
+    margin-bottom: 2rem;
+}
+
+.hierarchy-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.hierarchy-card {
+    background: #f8f9fa;
+    padding: 2rem;
+    border-radius: 10px;
+    border-left: 4px solid #28a745;
+}
+
+.hierarchy-card h3 {
+    color: #28a745;
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+}
+
+.hierarchy-card p {
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+/* Elements Diagram */
+.elements-diagram {
+    margin-top: 2rem;
+}
+
+.central-element {
+    background: linear-gradient(135deg, #3498db, #2980b9);
+    color: white;
+    padding: 2rem;
+    border-radius: 15px;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.central-element h3 {
+    font-size: 1.5rem;
+}
+
+.elements-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.element-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    border-top: 4px solid #e74c3c;
+}
+
+.element-card h4 {
+    color: #e74c3c;
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+}
+
+.element-card ul {
+    margin-left: 1.5rem;
+    color: #555;
+}
+
+.element-card li {
+    margin-bottom: 0.5rem;
+}
+
+/* Payment Types */
+.payment-types {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.payment-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    border-left: 4px solid #9b59b6;
+    transition: transform 0.3s ease;
+}
+
+.payment-card:hover {
+    transform: translateY(-5px);
+}
+
+.payment-card h3 {
+    color: #9b59b6;
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.payment-card p {
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+/* Benefits Grid */
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.benefit-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    border-top: 4px solid #27ae60;
+}
+
+.benefit-card:hover {
+    transform: translateY(-10px);
+}
+
+.benefit-card i {
+    font-size: 2.5rem;
+    color: #27ae60;
+    margin-bottom: 1rem;
+}
+
+.benefit-card h3 {
+    color: #2c3e50;
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+}
+
+.benefit-card p {
+    color: #555;
+    line-height: 1.6;
+    font-size: 0.95rem;
+}
+
+/* Current Value Section */
+.current-value {
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%) !important;
+    border-radius: 15px !important;
+    padding: 2rem !important;
+    color: white !important;
+}
+
+.current-value h2 {
+    color: white !important;
+}
+
+.current-value h2 i {
+    color: #fff !important;
+}
+
+.value-info {
+    margin-top: 2rem;
+}
+
+.value-card {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 2rem;
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.value-card h3 {
+    color: white;
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+}
+
+.value-card p {
+    color: rgba(255, 255, 255, 0.9);
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+.contact-info {
+    margin: 1.5rem 0;
+}
+
+.contact-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: white;
+    color: #3498db;
+    padding: 12px 24px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.contact-link:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.note {
+    font-style: italic;
+    opacity: 0.8;
+    font-size: 0.9rem;
+}
+
+/* Disclaimer */
+.disclaimer {
+    background: #fff3cd !important;
+    border: 2px solid #ffc107 !important;
+    border-radius: 15px !important;
+    padding: 2rem !important;
+}
+
+.disclaimer h2 {
+    color: #856404 !important;
+}
+
+.disclaimer h2 i {
+    color: #856404 !important;
+}
+
+.disclaimer-content p {
+    color: #856404;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.disclaimer-content ul {
+    margin: 1rem 0 1rem 2rem;
+}
+
+.disclaimer-content li {
+    color: #856404;
+    margin-bottom: 0.5rem;
+    line-height: 1.6;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        padding: 0 15px;
+    }
+    
+    .uda-header h1 {
+        font-size: 2rem;
+    }
+    
+    .uda-content {
+        padding: 1.5rem;
+    }
+    
+    .concept-grid,
+    .objectives-grid,
+    .calculation-info,
+    .hierarchy-grid,
+    .elements-grid,
+    .payment-types,
+    .benefits-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .nav-menu {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .timeline::before {
+        left: 20px;
+    }
+    
+    .timeline-item {
+        flex-direction: column !important;
+        align-items: flex-start;
+        padding-left: 50px;
+    }
+    
+    .timeline-year {
+        position: absolute;
+        left: -30px;
+        min-width: 60px;
+        font-size: 0.9rem;
+        padding: 0.8rem 1rem;
+    }
+    
+    .timeline-content {
+        margin: 1rem 0 0 0;
+        width: 100%;
+    }
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.uda-section {
+    animation: fadeInUp 0.6s ease-out;
+}
+
+/* Scroll animations */
+.uda-section {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.uda-section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
