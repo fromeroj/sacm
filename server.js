@@ -8,7 +8,7 @@ const cors = require('cors');
 const { calculateSACMTariff, UDA_VALUE_2017 } = require('./sacm_calculator');
 
 const app = express();
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 8800;
 
 // Middlewares
 app.use(cors());

@@ -1,0 +1,27 @@
+#
+#  copy this file to: /etc/systemd/system/sacm.service
+#  sudo cp sacm.service /etc/systemd/system/sacm.service
+#  STEP 2: Reload systemd & Enable Service
+#  sudo systemctl daemon-reload
+#  sudo systemctl enable sacm.service
+#  sudo systemctl start sacm.service
+#  sudo systemctl status sacm.service
+#
+
+[Unit]
+Description=SACM Node.js App
+After=network.target
+
+[Service]
+Type=simple
+User=fabian
+WorkingDirectory=/home/fabian/sites/sacm
+ExecStart=/usr/bin/npm start
+Restart=always
+RestartSec=10
+Environment=NODE_ENV=production
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target
